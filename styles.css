@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sub-header {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+}
+
+#newGridButton {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#newGridButton:hover {
+    background: #0056b3;
+    box-shadow: 0 15px 20px rgba(0, 91, 187, 0.4);
+}
+
+#newGridButton:active {
+    background: #003f7f;
+    transform: translateY(2px);
+    box-shadow: 0 6px 10px rgba(0, 63, 127, 0.4);
+}
+
+#container {
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 560px;
+    max-height: 560px;
+    display: grid;
+    margin-top: 20px;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.square {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    #container {
+        width: 80vmin;
+        height: 80vmin;
+    }
+
+    #newGridButton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
